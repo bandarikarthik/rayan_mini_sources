@@ -14,11 +14,26 @@ int main()
 	lcd_init();
 while(1)
 {
+	mdelay(1000);
+
+
 	lcd_print_string("karthik");
 
-	lcd_init();  //after printing re initialse the LCD refresh it by calling lcd_init();
 
-	mdelay(200);
+	mdelay(1000);mdelay(1000);mdelay(1000);
+
+	lcd_send_command(0xC0);
+
+	lcd_print_string("manjula");
+
+
+	mdelay(1000);mdelay(1000);mdelay(1000);
+
+   lcd_send_command(0x01);
+
+
+	mdelay(1000);
+
 
 }
 	return 0;
